@@ -28,7 +28,7 @@
 	   width: 50%;
 	   }
 	   
-	   #txt{
+	   .txt{
 	    color: white;
 	   }
 	   
@@ -61,7 +61,7 @@
 
 
 <table id="tabOne" align="center">
-<th><p id="txt" spacing="24px"  > A B O U T  M E </th></p>
+<th><p class="txt" spacing="24px"  > A B O U T  M E </th></p>
 
 
 <table class="info" align="center"> 
@@ -83,7 +83,7 @@
 
 
 <table id="tabTwo"  align="center">
-<th><p id="txt" spacing="24px" > M Y F A V O R I T E S </th></p>
+<th><p class="txt" spacing="24px" > M Y F A V O R I T E S </th></p>
 
 
 <table class="fav" align="center"> 
@@ -97,7 +97,7 @@
 </tr>
 
 <table id="quesAns"  align="center">
-<th><p id="txt" spacing="24px" >M O R E T R I V I A A B O U T M E</th></p>
+<th><p class="txt" spacing="24px" >M O R E T R I V I A A B O U T M E</th></p>
 
 <table id ="quesAns" align="center">
 <tr>
@@ -120,7 +120,7 @@
 </tr>
 
 <table id ="tabThree" align="center">
-<th><p id="txt" spacing="24px"  >M Y F A V O R I T E W E B S I T E S</th></p>
+<th><p class="txt" spacing="24px"  >M Y F A V O R I T E W E B S I T E S</th></p>
 <tr>
 <td id="c">
 <ul>
@@ -155,11 +155,16 @@
      document.body.style.background = "url('polka.jpg') fixed";
 	 document.querySelector("h1").style.color = "blue";
 	 document.querySelector("img").style.borderColor = "blueviolet";
+	 
+	 
+    var x = document.querySelectorAll(".txt");
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.fontSize="20px";
+    }
     }
 
 	 
-	 
- }
+
 
 </script>
 </body>
