@@ -2,24 +2,35 @@
 <title>Hello Visitor</title>
 <body>
 <style>
-h1{
+h2{
 	color:pink;
 	text-align: center;
+}
+.phpform{
+width:440px;
+border:1px solid blue;
+padding:10px 30px 40px;
+background-color:#f0f8ff;
+font-family:'Droid Serif',serif
+float: right;
+}
+.error{
+	color:red;
 }
 </style>
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = $nicknameErr = $addressErr = $cellphoneErr = "";
-$name = $email = $gender = $comment = $website = $nickname = $address = $cellphone = "";
+$nameErr = $emailErr = $genderErr  = $nicknameErr = $addressErr = $cellphoneErr = "";
+$name = $email = $gender = $comment = $nickname = $address = $cellphone = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$fullname)) {
-      $nameErr = "Only letters and white space allowed"; 
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and numbers allowed"; 
     }
   }
   
@@ -65,7 +76,7 @@ if(!empty($cellphone))
 {
     if(preg_match('/^\d{10}$/',$cellphone))
     {
-		$numberErr ="Cellphone number is required";
+		$cellphoneErr ="Cellphone number is required";
         $cellphone = '0' . $cellphone;
       
     }
@@ -88,7 +99,7 @@ function test_input($data) {
 }
 ?>
 <div class = "phpform">
-<h2>Leave your comment</h2>
+<h2>Visitor of Alyssa Anne's Page Form</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Full Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -109,10 +120,10 @@ function test_input($data) {
   </br>
   
   Cellphone Number: <input type="text" name="cellphone" value="<?php echo $cellphone;?>">
-  <span class="error">* <?php echo $numberErr;?></span>
+  <span class="error">*<?php echo $cellphoneErr;?></span>
   </br>
  
- Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   </br>
  
    <input type="submit" name="submit" value="Submit">  
@@ -122,6 +133,7 @@ function test_input($data) {
 <?php
 echo "<h2>Thank you for taking time filling the form:</h2>";
 echo "Hello!" . $nickname;
+echo "<br>";
 echo "A bit information about you dear vistor:";
 echo "<br>";
 echo $name;
