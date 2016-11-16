@@ -39,7 +39,7 @@ function delete_id(id)
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - <a href="http://cleartuts.blogspot.com" target="_blank">By Cleartuts</a></label>
+    <label>CRUD Operations With PHP and MySql <a href="http://cleartuts.blogspot.com" target="_blank"></a></label>
     </div>
 </div>
 
