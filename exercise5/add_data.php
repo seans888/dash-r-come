@@ -4,7 +4,7 @@
 <head>
 <header>
  <div id="content">
-    <label>CRUD OPERATION</label>
+    <label>CRUD Operations With PHP and MySql</label>
     </div>
 <?php
 
