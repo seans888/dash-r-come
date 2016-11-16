@@ -1,24 +1,25 @@
 <html>
 <title>Hello Visitor</title>
-<body>
 <style>
-h2{
-	color:pink;
-	text-align: center;
+
+body{
+	background-color:orange;
+	border:10px solid red;
 }
-.phpform{
+form{
 width:440px;
-border:1px solid blue;
 padding:10px 30px 40px;
-background-color:#f0f8ff;
 font-family:'Droid Serif',serif
-float: right;
+}
+h2{
+	color: green;
+	text-align: center;
 }
 .error{
 	color:red;
 }
 </style>
-
+<body>
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr  = $nicknameErr = $addressErr = $cellphoneErr = "";
@@ -98,8 +99,9 @@ function test_input($data) {
   return $data;
 }
 ?>
-<div class = "phpform">
+
 <h2>Visitor of Alyssa Anne's Page Form</h2>
+<div class = "phpform"><center>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Full Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -129,7 +131,7 @@ function test_input($data) {
    <input type="submit" name="submit" value="Submit">  
 </form>
 </div>
-
+</center>
 <?php
 echo "<h2>Thank you for taking time filling the form:</h2>";
 echo "Hello!" . $nickname;
