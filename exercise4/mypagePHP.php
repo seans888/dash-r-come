@@ -3,7 +3,7 @@
 <style>
 
 body{
-	background-color:orange;
+	background-color:pink;
 	border:10px solid red;
 }
 form{
@@ -12,8 +12,12 @@ padding:10px 30px 40px;
 font-family:'Droid Serif',serif
 }
 h2{
-	color: green;
+	color: black;
 	text-align: center;
+}
+.output{
+	text-align: center;
+	text-size: 15;
 }
 .error{
 	color:red;
@@ -132,6 +136,8 @@ function test_input($data) {
 </form>
 </div>
 </center>
+
+<div class="output">
 <?php
 echo "<h2>Thank you for taking time filling the form:</h2>";
 echo "Hello!" . $nickname;
@@ -152,6 +158,7 @@ echo $cellphone;
 echo "<br>";
 echo $comment;
 ?>
+</div>
 
 </body>
 </html>	
