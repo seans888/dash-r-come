@@ -4,7 +4,7 @@ include_once 'dbconfig.php';
 // delete condition
 if(isset($_GET['delete_id']))
 {
- $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+ $sql_query="DELETE FROM sample WHERE user_id=".$_GET['delete_id'];
  mysql_query($sql_query);
  header("Location: $_SERVER[PHP_SELF]");
 }
@@ -39,7 +39,7 @@ function delete_id(id)
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql <a href="http://cleartuts.blogspot.com" target="_blank"></a></label>
+    <label>CRUD Operations With PHP and MySql test<a href="http://cleartuts.blogspot.com" target="_blank"></a></label>
     </div>
 </div>
 
@@ -53,14 +53,13 @@ function delete_id(id)
     <th>Nickname</th>
     <th>Address</th>
 	<th>Email</th>
-	<th>Website</th>
     <th>Comment</th>
 	<th>Gender</th>
 	<th>Cellphone</th>
     <th colspan="2">Operations</th>
     </tr>
     <?php
- $sql_query="SELECT * FROM users";
+ $sql_query="SELECT * FROM sample";
  $result_set=mysqli_query($con, $sql_query);
  while($row=mysqli_fetch_row($result_set))
  {
@@ -73,7 +72,6 @@ function delete_id(id)
 		<td><?php echo $row[5]; ?></td>
 		<td><?php echo $row[6]; ?></td>
 		<td><?php echo $row[7]; ?></td>
-		<td><?php echo $row[8]; ?></td>
   <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
         </tr>

@@ -4,7 +4,7 @@
 <head>
 <header>
  <div id="content">
-    <label>CRUD Operations With PHP and MySql</label>
+    <label><center>CRUD Operations With PHP and MySql</center></label>
     </div>
 <?php
 
@@ -23,8 +23,8 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(name, email, nickname, address, comment, gender, cellphone) VALUES('$name','$email','$nickname','$address','$comment','$gender','$comment')";
- mysql_query($sql_query);
+        $sql_query = "INSERT INTO sample(name, email, nickname, address, comment, gender, cellphone) VALUES('$name','$email','$nickname','$address','$comment','$gender','$cellphone')";
+ mysqli_query($con, $sql_query);
  
 }
 
@@ -108,7 +108,7 @@ function test_input($data) {
 ?>
 <style>
 body{
-	background-color:pink;
+	background-color:white;
 	border:10px solid red;
 }
 form{
@@ -162,7 +162,7 @@ h2{
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   </br>
  
-   <input type="submit" name="submit" name="btn-save"></button>
+   <input type="submit" name="btn-save"></button>
    <strong>SAVE</strong></td> 
 </form>
 </div>
