@@ -133,7 +133,7 @@ h2{
 <body>  
 <center>
  <div id="content"><td align="center"><a href="index.php">back to main page</a></td>
-    </tr>
+   
 	<div class = "phpform"><center>
  <h2>Visitor of Alyssa Anne's Page Form</h2>
 <p><span class="error">* required field.</span></p>

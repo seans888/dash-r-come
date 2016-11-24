@@ -2,20 +2,26 @@
 include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
- $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysql_query($sql_query);
- $fetched_row=mysql_fetch_array($result_set);
+$sql_query="SELECT * FROM sample WHERE user_id=".$_GET['edit_id'];
+ $result_set=mysqli_query($con, $sql_query);
+ $fetched_row=mysqli_fetch_array($result_set);
 }
+
 if(isset($_POST['btn-update']))
 {
- // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
- // variables for input data
+// variables for input data
+ $name = $_POST['name'];
+ $email = $_POST['email'];
+ $nickname = $_POST['nickname'];
+ $address = $_POST['address'];
+ $comment = $_POST['comment'];
+ $gender = $_POST['gender'];
+ $cellphone= $_POST['cellphone'];
+ //-----------------------------
+ 
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "UPDATE users SET name='$name',nickname='$nickname',email='$email',address='$address',gender='$gender',comment='comment',cellphone='cellphone' WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
@@ -55,25 +61,37 @@ if(isset($_POST['btn-cancel']))
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    <label>EDITING & UPDATING DATABASE</label>
     </div>
 </div>
 
-<div id="body">
- <div id="content">
-    <form method="post">
-    <table align="center">
-    <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td>
+<body>  
+<center>
+ <div id="content"><td align="center"><a href="index.php">back to main page</a></td>
+   
+	<div class = "phpform"><center>
+ <h2>Visitor of Alyssa Anne's Page Form</h2>
+<p><span class="error">* required field.</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Full Name: <input type="text" name="name">
+  </br>
+   Nickname: <input type="text" name="nickname" >
+  </br>
+  E-mail Adress: <input type="text" name="email" >
+  </br>
+  Home Address: <textarea name="address" rows="5" cols="40"></textarea>
+  </br>
+   Gender:
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Female") echo "checked";?> value="female">Female
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Male") echo "checked";?> value="male">Male
+  </br>
+  
+  Cellphone Number: <input type="text" name="cellphone">
+  </br>
+ 
+  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+  </br>
+ 
     <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
     <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
     </td>
