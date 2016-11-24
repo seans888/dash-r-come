@@ -23,7 +23,7 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO sample(name, email, nickname, address, comment, gender, cellphone) VALUES('$name','$email','$nickname','$address','$comment','$gender','$cellphone')";
+        $sql_query = "INSERT INTO sample(name,nickname, email, address, comment, gender, cellphone) VALUES('$name','$nickname','$email','$address','$comment','$gender','$cellphone')";
  mysqli_query($con, $sql_query);
  
 }
@@ -179,9 +179,9 @@ echo $name;
 echo "<br>";
 echo $nickname;
 echo "<br>";
-echo $email;
-echo "<br>";
 echo $address;
+echo "<br>";
+echo $email;
 echo "<br>";
 echo $gender;
 echo "<br>";

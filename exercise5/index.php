@@ -51,12 +51,12 @@ function delete_id(id)
     </tr>
     <th>Name</th>
     <th>Nickname</th>
-    <th>Address</th>
 	<th>Email</th>
+	<th>Address</th>
     <th>Comment</th>
 	<th>Gender</th>
 	<th>Cellphone</th>
-    <th colspan="2">Operations</th>
+    <th colspan="3">Operations</th>
     </tr>
     <?php
  $sql_query="SELECT * FROM sample";
