@@ -15,7 +15,7 @@ if(isset($_GET['delete_id']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+<title>Form's Database</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
 function edt_id(id)
@@ -39,7 +39,7 @@ function delete_id(id)
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql test<a href="http://cleartuts.blogspot.com" target="_blank"></a></label>
+    <label>Alyssa Anne's Form DATABASE<a href="http://cleartuts.blogspot.com" target="_blank"></a></label>
     </div>
 </div>
 
@@ -47,7 +47,7 @@ function delete_id(id)
  <div id="content">
     <table align="center">
     <tr>
-    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    <th colspan="10"><a href="add_data.php">add data here.</a></th>
     </tr>
     <th>Name</th>
     <th>Nickname</th>

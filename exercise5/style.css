@@ -35,7 +35,7 @@ table
  width:80%;
  font-family:Tahoma, Geneva, sans-serif;
  font-weight:bolder;
- color:#999;
+ color:black;
  margin-bottom:80px;
 }
 table a
@@ -46,7 +46,7 @@ table a
 table,td,th
 {
  border-collapse:collapse;
- border:solid #d0d0d0 1px;
+ border:solid black 2px;
  padding:20px;
 }
 table td input

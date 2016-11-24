@@ -109,7 +109,7 @@ function test_input($data) {
 <style>
 body{
 	background-color:white;
-	border:10px solid red;
+	border:5px solid red;
 }
 form{
 width:440px;
@@ -150,8 +150,8 @@ h2{
   Home Address: <textarea name="address" rows="5" cols="40"><?php echo $address;?></textarea>
   </br>
    Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Female") echo "checked";?> value="female">Female
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Male") echo "checked";?> value="male">Male
   <span class="error">* <?php echo $genderErr;?></span>
   </br>
   
