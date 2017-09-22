@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<title>AlyssaAnne Page</title>
+<head>
+<body>
+	<style>
+		body {
+			background-image: url(awesome.jpg);
+			  font-style: italic;
+		} 
+		
+		h1{
+	     color: deeppink;
+	     text-align: center;
+	   }
+	   #tabOne{
+	   background-color:violet;
+	   border: 2px solid black;
+	   width: 50%;
+	   }
+	    #tabTwo{
+	   background-color:darkmagenta;
+	   border: 2px solid black;
+	   width: 50%;
+	   }
+	   #tabThree{
+	   background-color:deeppink;
+	   border: 2px solid black;
+	   width: 50%;
+	   }
+	   
+	   .txt{
+	    color: white;
+	   }
+	   
+	   img{
+	   width: 360px;
+	   height: 450px;
+	   border: 4px solid skyblue;
+	   }
+	   .info, .fav, #a, #b, #c, #d,#ques, #quess,#quess,#quesss, #quessss, #quesssss,#hI {
+	   background-color:pink;
+	   border: 2px solid black;
+	   width: 50%;
+	   
+	   }
+	   #quesAns, quesAns{
+	   background-color:hotpink;
+	   border: 2px solid black;
+	   width: 50%;
+	   }
+	 
+    </style>
+
+<h1>WELCOME TO Alyssa Anne's Page.</h1>
+<head>
+<center><button onclick="changeBg()">Click Me to change the background image</center></button>
+
+<center>
+<img src="mehhh.jpg">
+</center>
+
+
+<table id="tabOne" align="center">
+<th><p class="txt" spacing="24px"  > A B O U T  M E </th></p>
+
+
+<table class="info" align="center"> 
+<tr>
+<th id="a">FULLNAME:</th> <td id="b">Alyssa Anne Fernandez</td>
+</tr>
+<tr>
+<th id="a">NICKNAME:</th> <td id="b">Alyssa</td>
+</tr>
+<tr>
+<th id="a">BIRTHDAY:</th> <td id="b">March 14, 1998</td>
+</tr>
+<th id="a">HOBBIES:</th> <td id="b">Listening to music,reading and writing in Wattpad world.</td>
+</tr>
+<tr>
+<th id="a">INTEREST:</th><td id="b">Capturing moments that will happen to my life & discover many awesome things.</td>
+</tr>
+
+
+
+<table id="tabTwo"  align="center">
+<th><p class="txt" spacing="24px" > M Y F A V O R I T E S </th></p>
+
+
+<table class="fav" align="center"> 
+<tr>
+<th id ="c">COLOR:</th> <td id="d">Pink</td>
+</tr>
+<tr>
+<th id ="c">DESSERTS:</th> <td id="d">Chocolates, Donut, Ice cream & many more </td>
+</tr>
+<th id ="c">STORIES & MOVIES GENRE:</th> <td id="d">Fantasy, Lovestory, Vampires, Teenfiction</td>
+</tr>
+
+<table id="quesAns"  align="center">
+<th><p class="txt" spacing="24px" >M O R E T R I V I A A B O U T M E</th></p>
+
+<table id ="quesAns" align="center">
+<tr>
+<th id ="ques">What is your favorite pokemon?</th> <td id ="ans"><button oncLick="displayAns()">Answer</button></td>
+</tr>
+<tr>
+<th id ="quess">What is your favorite fruits?</th> <td id ="ans"><button oncLick="displayAnss()">Answer</button></td>
+</tr>
+<tr>
+<th id ="quesss">Places you went to?</th> <td id ="ans"><button oncLick="displayAnsss()">Answer</button></td>
+</tr>
+<tr>
+<th id="quessss">What Languages you know to speak?</th> <td id ="ans"><button oncLick="displayAnssss()">Answer</button></td>
+</tr>
+<tr>
+<th id="quesssss">Places you want to go to in the future?</th> <td id ="ans"><button oncLick="displayAnsssss()">Answer</button></td>
+</tr>
+<tr>
+<th id="hI">What are your other interest & hobbies?</th><td id ="ans"><button oncLick="displayHobnt()">Answer</button></td>
+</tr>
+
+<table id ="tabThree" align="center">
+<th><p class="txt" spacing="24px"  >M Y F A V O R I T E W E B S I T E S</th></p>
+<tr>
+<td id="c">
+<ul>
+<li><a href="https://twitter.com/">Twitter<a/></li>
+<li><a href="https://facebook.com/">Facebook<a/></li>
+<li><a href="https://wattpad.com/">Wattpad</a></li>
+</ul>
+</tr>
+</td>
+</table>
+<script>
+  function displayAns(){
+  document.getElementById("ques").innerHTML = "PICKACHU";
+  }
+    function displayAnss(){
+   document.getElementById("quess").innerHTML = "Grapes, Lanzones, Apple & Orange";
+ }
+   function displayAnsss(){
+   document.getElementById("quesss").innerHTML = "In Baguio, Tagaytay, Ilocos, Pangasinan";
+ }
+ function displayAnssss(){
+   document.getElementById("quessss").innerHTML = "English, Filipino, Hangul(Korean), Ilocano.";
+ }
+ function displayAnsssss(){
+   document.getElementById("quesssss").innerHTML = "South Korea, North Korea and Paris.";
+ }
+ function  displayHobnt(){
+   document.getElementById("hI").innerHTML = "Watching Korean Dramas, Surfing social medias.";
+ }
+ 
+ function changeBg(){
+     document.body.style.background = "url('polka.jpg') fixed";
+	 document.querySelector("h1").style.color = "blue";
+	 document.querySelector("img").style.borderColor = "blueviolet";
+    var x = document.querySelectorAll(".txt");
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.fontSize="25px";
+    }	
+	document.querySelector("#tabThree").style.backgroundColor="orange";
+	document.querySelector("#tabTwo").style.backgroundColor="skyblue";
+	document.querySelector("#tabOne").style.backgroundColor="lightgreen";
+	document.querySelector("#quesAns").style.backgroundColor="red";
+ }
+
+	 
+
+
+</script>
+</body>
+</html>
